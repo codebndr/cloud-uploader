@@ -41,7 +41,7 @@ if($output["error"])
 	
 // $curDir = getcwd();
 // chdir($directory);
-$output = dothat($filename, "cd $directory ; tftp -v -m octet $ip -c put ".$filename.".bin 2>&1"); // *.o -> *.elf
+$output = dothat($filename, "cd $directory ; tftp -R 4000:5000 -v -m octet $ip -c put ".$filename.".bin 2>&1"); // *.o -> *.elf
 // chdir($curDir);
 if($output["error"])
 {
