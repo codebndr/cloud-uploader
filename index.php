@@ -85,7 +85,7 @@ function cleanDir($filename)
 {
 
 	// if(file_exists($filename.".hex")) unlink($filename.".hex");
-	// if(file_exists($filename.".bin")) unlink($filename.".bin");
+	if(file_exists($filename.".bin")) unlink($filename.".bin");
 	// Remeber to suggest a cronjob, in case something goes wrong...
 	// find $path -name $filename.{o,cpp,elf,hex} -mtime +1 -delete
 }
