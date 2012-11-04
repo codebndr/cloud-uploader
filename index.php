@@ -19,10 +19,11 @@ do
 }
 while(file_exists($directory.$filename.".bin"));
 $file = fopen($directory.$filename.".bin", 'x');
+$value = base64_decode($value);
 
 if($file)
 {
-	fwrite($file, base64_decode($value));
+	fwrite($file, $value);
 	fclose($file);
 }
 
