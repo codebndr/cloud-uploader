@@ -17,7 +17,7 @@ do
 {
 	$filename = genRandomString(10);
 }
-while(file_exists($filename.".bin"));
+while(file_exists($directory.$filename.".bin"));
 $file = fopen($directory.$filename.".bin", 'x');
 
 if($file)
