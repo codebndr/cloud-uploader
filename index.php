@@ -7,7 +7,7 @@ if(!isset($_REQUEST['bin']))
 if(!isset($_REQUEST['ip']))
 	die(json_encode(array('success' => 0, 'text' => "NO IP!")));
 
-$value = $_REQUEST['bin'];
+$value = str_replace(" ","+",$_REQUEST['bin']);
 $ip = $_REQUEST['ip'];
 
 // echo($value);
